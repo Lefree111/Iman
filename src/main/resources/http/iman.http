@@ -1,0 +1,37 @@
+###
+POST http://localhost:8091/api/v1/json/create
+Content-Type: application/json
+
+{
+  "id": 181,
+  "user_id": 3974,
+  "title": "salom",
+  "body": "salom"
+}
+
+
+###
+GET http://localhost:8091/api/v1/json/allElemtn
+Content-Type: application/json
+
+###
+GET http://localhost:8091/api/v1/json/getById/204
+Content-Type: application/json
+
+###
+DELETE http://localhost:8091/api/v1/json/delete/201
+Content-Type: application/json
+
+###
+PUT http://localhost:8091/api/v1/json/updateJson/200
+Content-Type: application/json
+
+{
+  "user_id": 3974,
+  "title": "salom",
+  "body": "salom"
+}
+
+###
+GET http://localhost:8091/api/v1/json/readAndWrite
+Content-Type: application/json
