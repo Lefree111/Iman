@@ -19,11 +19,6 @@ public class JsonController {
         this.jsonService = jsonService;
     }
 
-    @PutMapping("/updateJson/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") Integer id, @RequestBody JsonDTO dto) {
-        return ResponseEntity.ok(jsonService.update(id, dto));
-    }
-
     @GetMapping("/readAndWrite")
     public ResponseEntity<?> json(){
         return ResponseEntity.ok(jsonService.readAndWrite());
@@ -43,6 +38,11 @@ public class JsonController {
     @GetMapping("/getById/{id}")
     public ResponseEntity<?> getById(@PathVariable("id") Integer id){
         return ResponseEntity.ok(jsonService.getById(id));
+    }
+
+    @PutMapping("/updateJson/{id}")
+    public ResponseEntity<?> update(@PathVariable("id") Integer id, @RequestBody JsonDTO dto) {
+        return ResponseEntity.ok(jsonService.update(id, dto));
     }
 
     @DeleteMapping("/delete/{id}")
